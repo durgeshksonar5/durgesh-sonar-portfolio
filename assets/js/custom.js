@@ -2509,7 +2509,7 @@
             // Initial mouse position (center of video)
             const o = window.innerWidth / 2 - this.$el.offsetWidth / 2;
             const s = window.innerHeight / 2 - this.$el.offsetHeight / 2;
-            const r = this.$parent ? .getBoundingClientRect();
+            const r = this.$parent?.getBoundingClientRect();
 
             this.mouse = {
                 x: o,
@@ -2653,7 +2653,7 @@
 
     // Initialize
     const parentEl = document.querySelector(".home8-service-section");
-    const videoArea = parentEl ? .querySelector(".video-area");
+    const videoArea = parentEl?.querySelector(".video-area");
 
     if (parentEl && videoArea) {
         const videoCursor = new VideoAreaCursor({
@@ -3468,7 +3468,7 @@
             const navArea = pfThumbPage.querySelector(".navigation-and-sm-img-slider-area");
             const titleItems = pfThumbPage.querySelectorAll(".pf-paralax-img-slider-title-list .single-pf-paralax-title");
 
-            let isOpen = thumbWrap ? .classList.contains("show") || false;
+            let isOpen = thumbWrap?.classList.contains("show") || false;
             let startX = null;
             let startY = null;
             const DRAG_THRESHOLD = 12;
@@ -3883,7 +3883,7 @@
                     }, "hideContent-=0.5");
             };
 
-            if (document.fonts ? .ready) {
+            if (document.fonts?.ready) {
                 document.fonts.ready.then(run);
             } else {
                 setTimeout(run, 100);
