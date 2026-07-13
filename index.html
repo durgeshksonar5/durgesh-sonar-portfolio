@@ -188,104 +188,6 @@
             background: #111;
         }
 
-        /* Glassmorphism Bottom Overlay */
-        .showcase-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 25px 30px;
-            background: rgba(10, 10, 10, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transform: translateY(100%);
-            opacity: 0;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
-            z-index: 10;
-        }
-
-        .showcase-card:hover .showcase-overlay {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .overlay-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .overlay-title {
-            font-family: var(--font-kanit);
-            color: var(--white-color);
-            font-size: 22px;
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .overlay-subtitle {
-            font-family: var(--font-archivo);
-            color: var(--primary-color1);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 500;
-        }
-
-        .overlay-btn {
-            font-family: var(--font-kanit);
-            background-color: var(--primary-color1);
-            color: var(--dark-black-color) !important;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .overlay-btn:hover {
-            background-color: var(--white-color);
-            color: var(--dark-black-color) !important;
-        }
-
-        .overlay-btn i {
-            font-size: 16px;
-            transition: transform 0.3s;
-        }
-
-        .overlay-btn:hover i {
-            transform: translateX(4px);
-        }
-
-        @media (max-width: 767px) {
-            /* On mobile, show overlay by default and style slightly smaller */
-            .showcase-overlay {
-                transform: translateY(0);
-                opacity: 1;
-                padding: 15px 20px;
-            }
-            .overlay-title {
-                font-size: 18px;
-            }
-            .overlay-subtitle {
-                font-size: 12px;
-            }
-            .overlay-btn {
-                padding: 6px 12px;
-                font-size: 11px;
-            }
-        }
     </style>
     <!-- Title -->
     <title>Durgesh Sonar Portfolio</title>
@@ -551,16 +453,6 @@
                                 <div class="iframe-container">
                                     <iframe class="showcase-iframe" src="https://www.lescatech.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
-                                <!-- Hover overlay at the bottom -->
-                                <div class="showcase-overlay">
-                                    <div class="overlay-info">
-                                        <h3 class="overlay-title">Lesca Tech</h3>
-                                        <span class="overlay-subtitle">Corporate Website</span>
-                                    </div>
-                                    <a href="https://www.lescatech.com/" target="_blank" class="overlay-btn">
-                                        Visit Website <i class="bx bx-right-arrow-alt"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
@@ -569,16 +461,6 @@
                             <div class="showcase-card">
                                 <div class="iframe-container">
                                     <iframe class="showcase-iframe" src="https://paperystickindustries.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                                <!-- Hover overlay at the bottom -->
-                                <div class="showcase-overlay">
-                                    <div class="overlay-info">
-                                        <h3 class="overlay-title">Paperystick Industries</h3>
-                                        <span class="overlay-subtitle">Manufacturing Website</span>
-                                    </div>
-                                    <a href="https://paperystickindustries.com/" target="_blank" class="overlay-btn">
-                                        Visit Website <i class="bx bx-right-arrow-alt"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -589,16 +471,6 @@
                                 <div class="iframe-container">
                                     <iframe class="showcase-iframe" src="https://www.egenslab.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
-                                <!-- Hover overlay at the bottom -->
-                                <div class="showcase-overlay">
-                                    <div class="overlay-info">
-                                        <h3 class="overlay-title">Egens Lab</h3>
-                                        <span class="overlay-subtitle">Creative Portfolio</span>
-                                    </div>
-                                    <a href="https://www.egenslab.com/" target="_blank" class="overlay-btn">
-                                        Visit Website <i class="bx bx-right-arrow-alt"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
@@ -607,16 +479,6 @@
                             <div class="showcase-card">
                                 <div class="iframe-container">
                                     <iframe class="showcase-iframe" src="https://www.anioagency.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                                <!-- Hover overlay at the bottom -->
-                                <div class="showcase-overlay">
-                                    <div class="overlay-info">
-                                        <h3 class="overlay-title">Anio Agency</h3>
-                                        <span class="overlay-subtitle">Design Studio</span>
-                                    </div>
-                                    <a href="https://www.anioagency.com/" target="_blank" class="overlay-btn">
-                                        Visit Website <i class="bx bx-right-arrow-alt"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
