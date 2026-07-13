@@ -188,67 +188,6 @@
             background: #111;
         }
 
-        /* Fallback Layer behind/under iframe */
-        .iframe-fallback {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-            z-index: 1; /* Under the iframe or toggleable */
-        }
-
-        .fallback-icon {
-            font-size: 48px;
-            color: var(--primary-color1);
-            margin-bottom: 15px;
-            opacity: 0.8;
-        }
-
-        .fallback-title {
-            font-family: var(--font-kanit);
-            color: var(--white-color);
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .fallback-desc {
-            font-family: var(--font-archivo);
-            color: var(--dark-text-color);
-            font-size: 16px;
-            max-width: 320px;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .fallback-btn {
-            font-family: var(--font-kanit);
-            background-color: var(--primary-color1);
-            color: var(--dark-black-color) !important;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.05em;
-            transition: 0.3s;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(194, 238, 16, 0.3);
-        }
-
-        .fallback-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(194, 238, 16, 0.5);
-        }
-
         /* Glassmorphism Bottom Overlay */
         .showcase-overlay {
             position: absolute;
@@ -327,44 +266,6 @@
 
         .overlay-btn:hover i {
             transform: translateX(4px);
-        }
-
-        .showcase-toggle-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(10, 10, 10, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--white-color);
-            font-family: var(--font-kanit);
-            font-size: 12px;
-            padding: 6px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            z-index: 15;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .showcase-toggle-btn:hover {
-            background: var(--primary-color1);
-            color: var(--dark-black-color);
-            border-color: var(--primary-color1);
-        }
-
-        /* Toggle between Live Preview (iframe) and Fallback Message */
-        .showcase-card.show-fallback .showcase-iframe {
-            display: none;
-        }
-        .showcase-card.show-fallback .iframe-fallback {
-            z-index: 12;
-        }
-        .showcase-card.show-fallback .showcase-toggle-btn {
-            background: var(--primary-color1);
-            color: var(--dark-black-color);
         }
 
         @media (max-width: 767px) {
@@ -647,17 +548,7 @@
                         <!-- Card 1: Lesca Tech -->
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="showcase-card">
-                                <button class="showcase-toggle-btn" onclick="toggleShowcase(this)" title="Toggle Live Preview / Fallback Screen">
-                                    <i class="bx bx-refresh"></i> Toggle Live View
-                                </button>
                                 <div class="iframe-container">
-                                    <!-- Fallback message displayed behind or when toggled -->
-                                    <div class="iframe-fallback">
-                                        <i class="bx bx-error-circle fallback-icon"></i>
-                                        <h4 class="fallback-title">Live Preview Unavailable</h4>
-                                        <p class="fallback-desc">This website does not allow embedded previews.</p>
-                                        <a href="https://www.lescatech.com/" target="_blank" class="fallback-btn">Open Website</a>
-                                    </div>
                                     <iframe class="showcase-iframe" src="https://www.lescatech.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                                 <!-- Hover overlay at the bottom -->
@@ -676,17 +567,7 @@
                         <!-- Card 2: Paperystick Industries -->
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="showcase-card">
-                                <button class="showcase-toggle-btn" onclick="toggleShowcase(this)" title="Toggle Live Preview / Fallback Screen">
-                                    <i class="bx bx-refresh"></i> Toggle Live View
-                                </button>
                                 <div class="iframe-container">
-                                    <!-- Fallback message displayed behind or when toggled -->
-                                    <div class="iframe-fallback">
-                                        <i class="bx bx-error-circle fallback-icon"></i>
-                                        <h4 class="fallback-title">Live Preview Unavailable</h4>
-                                        <p class="fallback-desc">This website does not allow embedded previews.</p>
-                                        <a href="https://paperystickindustries.com/" target="_blank" class="fallback-btn">Open Website</a>
-                                    </div>
                                     <iframe class="showcase-iframe" src="https://paperystickindustries.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                                 <!-- Hover overlay at the bottom -->
@@ -705,17 +586,7 @@
                         <!-- Card 3: Egens Lab -->
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="showcase-card">
-                                <button class="showcase-toggle-btn" onclick="toggleShowcase(this)" title="Toggle Live Preview / Fallback Screen">
-                                    <i class="bx bx-refresh"></i> Toggle Live View
-                                </button>
                                 <div class="iframe-container">
-                                    <!-- Fallback message displayed behind or when toggled -->
-                                    <div class="iframe-fallback">
-                                        <i class="bx bx-error-circle fallback-icon"></i>
-                                        <h4 class="fallback-title">Live Preview Unavailable</h4>
-                                        <p class="fallback-desc">This website does not allow embedded previews.</p>
-                                        <a href="https://www.egenslab.com/" target="_blank" class="fallback-btn">Open Website</a>
-                                    </div>
                                     <iframe class="showcase-iframe" src="https://www.egenslab.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                                 <!-- Hover overlay at the bottom -->
@@ -734,17 +605,7 @@
                         <!-- Card 4: Anio Agency -->
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="showcase-card">
-                                <button class="showcase-toggle-btn" onclick="toggleShowcase(this)" title="Toggle Live Preview / Fallback Screen">
-                                    <i class="bx bx-refresh"></i> Toggle Live View
-                                </button>
                                 <div class="iframe-container">
-                                    <!-- Fallback message displayed behind or when toggled -->
-                                    <div class="iframe-fallback">
-                                        <i class="bx bx-error-circle fallback-icon"></i>
-                                        <h4 class="fallback-title">Live Preview Unavailable</h4>
-                                        <p class="fallback-desc">This website does not allow embedded previews.</p>
-                                        <a href="https://www.anioagency.com/" target="_blank" class="fallback-btn">Open Website</a>
-                                    </div>
                                     <iframe class="showcase-iframe" src="https://www.anioagency.com/" loading="lazy" scrolling="yes" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                                 <!-- Hover overlay at the bottom -->
@@ -762,12 +623,6 @@
                     </div>
                 </div>
             </div>
-            <script>
-                function toggleShowcase(btn) {
-                    const card = btn.closest('.showcase-card');
-                    card.classList.toggle('show-fallback');
-                }
-            </script>
             <!-- home9 Portfolio Section End-->
 
             <!-- home9 Scroll Text Section Start-->
